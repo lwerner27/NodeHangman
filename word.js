@@ -17,6 +17,8 @@ Word.prototype.showWord = function() {
     }
 
     currentStateString = currentStateArray.join(" ")
+
+    console.log(currentStateString)
     
     return currentStateString
     
@@ -27,17 +29,10 @@ Word.prototype.makeGuess = function (char) {
         this.word[i].checkGuess(char)
     }
 
-    console.log(this.showWord())
+    // console.log(this.showWord())
+
+    return this.showWord()
+
 }
-
-// let testWord = ['l','u','c','a','s']
-
-// let test = new Word(testWord)
-
-// test.showWord()
-// test.makeGuess('b')
-// test.makeGuess('l')
-// test.makeGuess('c')
-// test.makeGuess("s")
 
 module.exports = Word
